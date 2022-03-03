@@ -35,4 +35,9 @@ alias fucksudo='faillock --user rewardedivan --reset'
 alias rmrf='rm -rf'
 alias untargz='tar -xzf'
 alias untar='tar -xf'
-# dd help sudo dd bs=512M status=progress if=file.iso of=/dev/sdX
+alias gst='git status'
+alias ga='git add .'
+alias gp='git push'
+alias cgph='xclipc ~/gph'
+alias gcom='git commit -m'
+# dd help: sudo dd bs=512M status=progress if=file.iso of=/dev/sdX

@@ -24,7 +24,7 @@ uethernet = #1047CA
 ui3selected = ${colors.foreground}
 utemperature = #CA9D15
 udisks = #696969 
-; i swear i was looking for a gray color and happend to come upon this
+; i swear i^ was looking for a gray color and happend to come upon this
 ukeymap = #FFFFFF
 uupdate = #61AF0C
 uwtitle = #4A4A4A
@@ -107,7 +107,7 @@ format-mounted-underline = ${colors.udisks}
 [module/update]
 type = custom/script
 exec = /home/rewardedivan/Scripts/update
-interval = 1800
+interval = 14400
 tail = true
 format-underline = ${colors.uupdate}
 
