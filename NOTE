@@ -1,0 +1,3 @@
+Anything that is not changed is marked with a file called "notchanged" in the directory.
+Anything that could leak private information is removed. Sorry about that :\
+Anything that I don't use (eg. i3blocks) is removed.

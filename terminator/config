@@ -1,0 +1,42 @@
+[global_config]
+  geometry_hinting = True
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, Logger, TerminalShot, CustomCommandsMenu
+  title_use_system_font = False
+  title_font = Ubuntu Mono 12
+[keybindings]
+  copy = <Primary>c
+  paste = <Primary>v
+[profiles]
+  [[default]]
+    background_darkness = 0.75
+    background_type = transparent
+    cursor_shape = ibeam
+    cursor_color = "#aaaaaa"
+    font = Ubuntu Mono 12
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    word_chars = "-,./?%&#:_ "
+    use_custom_command = True
+    custom_command = /bin/fish
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 20:38
+      maximised = False
+      fullscreen = False
+      size = 931, 1001
+      title = yay -S multimc5  /home/rewardedivan
+      last_active_term = 202a2c39-6b69-4074-be3e-8090ff2310e1
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = default
+      uuid = 202a2c39-6b69-4074-be3e-8090ff2310e1
+[plugins]
