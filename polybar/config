@@ -97,7 +97,7 @@ interval = 10
 format-mounted =  <label-mounted>
 fixed-values = false
 label-mounted = %used%/%total% %mountpoint%
-label-unmounted = %mountpoint% not mounted (wAIT HHAWTHAH)
+label-unmounted = %mountpoint% not mounted 
 label-unmounted-foreground = #FF0004
 format-unmounted-underline = #FF0004
 format-unmounted = <label-unmounted>
@@ -107,15 +107,16 @@ format-mounted-underline = ${colors.udisks}
 [module/update]
 type = custom/script
 exec = /home/rewardedivan/Scripts/update
-interval = 14400
-tail = true
+click-left = /home/rewardedivan/Scripts/updatern
 format-underline = ${colors.uupdate}
+tail = true
 
 
 [module/cputemp]
 type = custom/script
 exec = /home/rewardedivan/.config/polybar/scripts/cputemp
 interval = 10
+tail = true
 ; doesnt work for mine D:
 
 
