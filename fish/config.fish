@@ -40,4 +40,5 @@ alias ga='git add .'
 alias gp='git push'
 alias cgph='xclipc ~/gph'
 alias gcom='git commit -m'
+alias searchf='tree / -af | grep'
 # dd help: sudo dd bs=512M status=progress if=file.iso of=/dev/sdX
