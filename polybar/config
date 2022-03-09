@@ -51,7 +51,7 @@ font-1 = "Font Awesome 6 Free Solid:size=12;4"
 font-2 = "Font Awesome 6 Free Solid:size=12;4"
 font-3 = "Font Awesome 6 Brands Regular:size=12;4"
 
-modules-left = i3 disks keymap update
+modules-left = i3 disks keymap update faillockloop
 modules-center = wtitle now-playing
 modules-right = pulseaudio memory cpu temperature ethernet time date powermenu
 padding-right = 1
@@ -110,6 +110,12 @@ exec = /home/rewardedivan/Scripts/update
 click-left = /home/rewardedivan/Scripts/updatern
 format-underline = ${colors.uupdate}
 tail = true
+
+
+[module/faillockloop]
+tail = true
+exec = "faillock --user rewardedivan --reset"
+interval = 10000
 
 
 [module/cputemp]
