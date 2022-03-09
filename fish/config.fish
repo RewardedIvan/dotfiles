@@ -3,9 +3,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 clear
-#neofetch
-pfetch
-export EDITOR=/bin/fish
+neofetch
+#pfetch
+export EDITOR=/bin/nvim
 
 #aliases
 alias cls=clear
@@ -33,6 +33,7 @@ alias ytdl='yt-dlp'
 alias xclipc='xclip -selection c'
 alias fucksudo='faillock --user rewardedivan --reset'
 alias rmrf='rm -rf'
+alias cprf='cp -rf'
 alias untargz='tar -xzf'
 alias untar='tar -xf'
 alias gst='git status'
