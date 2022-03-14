@@ -206,7 +206,7 @@ default_border pixel 2
 for_window [all] border pixel 2
 for_window [title="Volume Control"] floating enable
 #keybinds
-bindsym $mod+b exec brave
+bindsym $mod+b exec brave-beta
 bindsym $mod+c exec chromium
 bindsym $mod+e exec thunar
 bindsym $mod+p exec pavucontrol
@@ -219,8 +219,9 @@ bindsym $mod+l exec i3lock -fp default -c \#2E2E2E
 bindsym $mod+Ctrl+c exec code
 bindsym $mod+m exec discord
 bindsym $mod+g exec gimp  
+bindsym $mod+Shift+v virt-manager
 #auto start
 exec_always /home/rewardedivan/.config/polybar/launch.sh
-exec_always feh --bg-center ~/Pictures/bg.png
+exec_always feh --bg-fill ~/Pictures/bg.png
 exec_always picom --config .config/picom/picom.conf
 exec_always --no-startup-id xrdb -load ~/.Xresources

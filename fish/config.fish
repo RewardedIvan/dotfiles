@@ -44,4 +44,5 @@ alias gcom='git commit -m'
 alias searchf='tree / -af | grep'
 alias searchp='pacman -Q | grep'
 alias brave='brave-beta'
+alias grs='git restore --staged'
 # dd help: sudo dd bs=512M status=progress if=file.iso of=/dev/sdX
