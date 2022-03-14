@@ -219,7 +219,7 @@ bindsym $mod+l exec i3lock -fp default -c \#2E2E2E
 bindsym $mod+Ctrl+c exec code
 bindsym $mod+m exec discord
 bindsym $mod+g exec gimp  
-bindsym $mod+Shift+v virt-manager
+bindsym $mod+Shift+v exec virt-manager
 #auto start
 exec_always /home/rewardedivan/.config/polybar/launch.sh
 exec_always feh --bg-fill ~/Pictures/bg.png
