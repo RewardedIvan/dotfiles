@@ -3,7 +3,7 @@ window.onload = function() {
     this.initBody();
     this.listenForSettings();
     document.getElementById("search-bar-input").focus();
-    document.addEventListener("keydown", () => { document.getElementById('search-bar-input').focus(); } );
+    document.addEventListener("keydown", () => { if (!document.getElementById("settings").style.display) { document.getElementById('search-bar-input').focus(); } } );
 }
 
 
