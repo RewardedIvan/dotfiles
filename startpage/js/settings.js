@@ -15,7 +15,9 @@ jsonContainer = "jsoneditor"
 BROWSER = detectBrowser()
 
 function showSettings() {
-    document.getElementById("search-bar-input-autocomplete-list").style.paddingBottom = "0px";
+    try {
+        document.getElementById("search-bar-input-autocomplete-list").style.paddingBottom = "0px";
+    } catch {}
     modalEl = document.getElementById(modalId)
     closeBtn = document.getElementsByClassName(closeId)[0]
     modalEl.style.display = "block"
