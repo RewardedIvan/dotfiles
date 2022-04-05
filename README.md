@@ -4,6 +4,6 @@
 [the reddit post](https://www.reddit.com/r/unixporn/comments/t5tx4c/i3gaps_first_i3_post_in_a_while/)
 
 # dependencies
-i3-gaps, i3lock, brave-bin<sup>aur</sup>, picom, polybar<sup>aur</sup>, feh, scrot, thunar, pavucontrol, \*insert your favorite font\*, [oceanic](https://chrome.google.com/webstore/detail/oceanic/gbbacdmgjdfajabgglpjifcedoajdimg) (chrome theme), xorg-xrdb, arc-gtk-theme, neofetch, terminator, papirus-icon-theme, deepin-icon-theme<sup>cursor</sup>
+i3-gaps, i3lock, brave-bin<sup>aur</sup>, picom, polybar<sup>aur</sup>, feh, scrot, thunar, pavucontrol, \*insert your favorite font\*, [oceanic](https://chrome.google.com/webstore/detail/oceanic/gbbacdmgjdfajabgglpjifcedoajdimg) (chrome theme), xorg-xrdb, arc-gtk-theme, neofetch, terminator, papirus-icon-theme, deepin-icon-theme<sup>cursor</sup>, [free fontawesome for the desktop](https://fontawesome.com/download)
 # optional dependencies
 code (vscode), chromium, gimp, guake, ttf-ubuntu-font-family, brave-beta-bin<sup>aur</sup>, pfetch<sup>aur</sup>, spicetify, discord
