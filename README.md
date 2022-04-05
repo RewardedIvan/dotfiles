@@ -9,6 +9,6 @@ i3-gaps, i3lock, brave-bin<sup>aur</sup>, picom, polybar<sup>aur</sup>, feh, scr
 code (vscode), chromium, gimp, guake, ttf-ubuntu-font-family, brave-beta-bin<sup>aur</sup>, pfetch<sup>aur</sup>, spicetify, discord
 # note
 Anything that is not changed is marked with a file called "notchanged" in the directory.
-Anything that could leak private information is removed. Sorry about that :\
+Anything that could leak private information is removed. Sorry about that :\\
 Anything that I don't use (eg. i3blocks) is removed.
 Expect quite frequent updates on this repo, beacuse I like changing things :D
