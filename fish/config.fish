@@ -1,10 +1,9 @@
-# vi:syntax=sh:
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 clear
-neofetch
-#pfetch
+neofetch | lolcat
+#pfetch | lolcat
 export EDITOR=/bin/nvim
 
 #aliases
@@ -14,7 +13,8 @@ alias lcs=clear
 alias lsc=clear
 alias scl=clear
 alias slc=clear
-alias nf=neofetch
+alias nf='neofetch | lolcat'
+alias pf='pfetch | lolcat'
 alias ls='exa --color always -lah'
 alias lsv=/etc/ls
 alias pacmanSy='sudo pacman -Sy'
@@ -29,7 +29,7 @@ alias cfc='nvim ~/.config/fish/config.fish'
 alias ci3c='nvim ~/.config/i3/config'
 alias cpbc='nvim ~/.config/polybar/config.ini'
 alias rmr='rm -rfI'
-alias ytdl='yt-dlp'
+alias ytdl "yt-dlp -f bestvideo+bestaudio --merge-output-format mp4" # credit: https://github.com/kiosion/dotfiles/blob/8161bfe924e8c717f04b44e92cea2af18415b628/.macos/.config/fish/config.fish
 alias xclipc='xclip -selection c'
 alias fucksudo='faillock --user rewardedivan --reset'
 alias rmrf='rm -rf'
@@ -45,7 +45,6 @@ alias gacom='git add . && git commit -m'
 alias searchf='tree / -af | grep'
 alias searchfh='tree ./ -af | grep'
 alias searchp='pacman -Q | grep'
-alias brave='brave-beta'
 alias grs='git restore --staged'
 alias chmodpx='chmod +x'
 # dd help: sudo dd bs=512M status=progress if=file.iso of=/dev/sdX
