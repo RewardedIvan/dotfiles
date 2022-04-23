@@ -46,4 +46,6 @@ alias searchfh='tree ./ -af | grep'
 alias searchp='pacman -Q | grep'
 alias grs='git restore --staged'
 alias chmodpx='chmod +x'
+alias of 'onefetch'
+alias d 'dictionarycli'
 # dd help: sudo dd bs=512M status=progress if=file.iso of=/dev/sdX
