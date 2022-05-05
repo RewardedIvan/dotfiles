@@ -36,6 +36,7 @@ bgClassContainer = [
 searchEngines = {
     "Google": "https://www.google.com/search?q=",
     "DuckDuckGo": "https://duckduckgo.com/?q=",
+    "Brave": "https://search.brave.com/search?=",
     "Bing": "https://www.bing.com/search?q=",
     "Yahoo": "https://search.yahoo.com/search?p=",
     "Ecosia": "https://www.ecosia.org/search?q="
