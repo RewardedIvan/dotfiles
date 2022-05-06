@@ -1,6 +1,6 @@
-""" Optixal's Neovim Init.vim
+""" Optixal's (old) Neovim Init.vim X RewardedIvan's modified (old) Optixal Init.vim 
 
-""" Vim-Plug
+""" Vim-Plug [https://github.com/junegunn/vim-plug]
 call plug#begin()
 
 " Aesthetics - Main
@@ -8,14 +8,11 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bryanmylee/vim-colorscheme-icons'
-Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify' " might remove
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-journal'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'nightsense/forgotten'
-Plug 'zaki/zazen'
 
 " Aethetics - Additional
 Plug 'nightsense/nemo'
@@ -24,20 +21,14 @@ Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'rhysd/vim-color-spring-night'
 
 " Functionalities
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhinz/vim-signify'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-abolish'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -50,7 +41,7 @@ Plug 'metakirby5/codi.vim'
 Plug 'dkarter/bullets.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'wellle/context.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " Entertainment
 Plug 'dansomething/vim-hackernews'
@@ -71,6 +62,7 @@ set textwidth=0
 set hidden
 set number
 set title
+set lazyredraw
 
 """ Coloring
 
@@ -102,16 +94,11 @@ set termguicolors
 
 """ Plugin Configurations
 
-" NERDTree
-let NERDTreeShowHidden=1
-" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_section_z = ' %{strftime("%-I:%M %p")}'
 let g:airline_section_warning = ''
-"let g:airline#extensions#tabline#enabled = 1 " Uncomment to display buffer tabline above
+let g:airline#extensions#tabline#enabled = 1 " Uncomment to display buffer tabline above
 
 " Neovim :Terminal
 tmap <Esc> <C-\><C-n>
@@ -167,17 +154,20 @@ let $BAT_THEME='base16'
 " Limelight
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_guifg = 'gray'
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight
+
 
 " Startify
 let g:startify_fortune_use_unicode = 1
 
-" Startify + NERDTree on start when no file is specified
+" Startify on start when no file is specified
 autocmd VimEnter *
     \   if !argc()
     \ |   Startify
-    \ |   NERDTree
     \ |   wincmd w
     \ | endif
+    \ |  Limelight
 
 " coc.vim START
 
@@ -276,9 +266,6 @@ hi DiffDelete guifg=#ff5555 guibg=none
 " FixCursorHold for better performance
 let g:cursorhold_updatetime = 100
 
-" context.vim
-let g:context_nvim_no_redraw =1
-
 """ Filetype-Specific Configurations
 
 " HTML, XML, Jinja
@@ -309,32 +296,11 @@ function! ColorDracula()
     color dracula
 endfunction
 
-" Seoul256 Mode (Dark & Light)
-function! ColorSeoul256()
-    let g:airline_theme='silver'
-    color seoul256
-endfunction
-
-" Forgotten Mode (Light)
-function! ColorForgotten()
-    " Other light airline themes: tomorrow, silver, alduin
-    let g:airline_theme='tomorrow'
-    " Other light colors: forgotten-light, nemo-light
-    color forgotten-light
-endfunction
-
-" Zazen Mode (Black & White)
-function! ColorZazen()
-    let g:airline_theme='minimalist'
-    color zazen
-endfunction
-
 """ Custom Mappings
 
 let mapleader=","
 nmap <leader>$s <C-w>s<C-w>j:terminal<CR>:set nonumber<CR><S-a>
 nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
-nmap <leader>q :NERDTreeToggle<CR>
 nmap \\ <leader>q
 nmap <leader>w :TagbarToggle<CR>
 nmap \| <leader>w
@@ -360,6 +326,7 @@ nmap <leader>k :ColorToggle<CR>
 nmap <leader>l :Limelight!!<CR>
 xmap <leader>l :Limelight!!<CR>
 autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
+autocmd FileType python Codi
 nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
