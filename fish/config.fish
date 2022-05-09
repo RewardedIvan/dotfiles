@@ -32,6 +32,7 @@ alias ytdl "yt-dlp -f bestvideo+bestaudio --merge-output-format mp4" # credit: h
 alias xclipc='xclip -selection c'
 alias fucksudo='faillock --user rewardedivan --reset'
 alias rmrf='rm -rfI'
+alias rmrfDONTASK 'rm -rf'
 alias cprf='cp -rf'
 alias untargz='tar -xzf'
 alias untar='tar -xf'
