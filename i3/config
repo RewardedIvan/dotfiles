@@ -215,7 +215,7 @@ bindsym $mod+s exec "scrot '/home/rewardedivan/Screenshots/%I\:%M:%S\ %y-%m-%d.p
 # :\ bindsym $mod+Shift+s exec "bash -c 'scrot \'/home/rewardedivan/Screenshots/%I\:%M:%S\ %y-%m-%d.png\' -s'"
 bindsym $mod+Ctrl+s exec "scrot '/tmp/%I:%M:%S.%y-%m-%d.png' -e 'gimp $f ; rm $f'"
 # :\ bindsym $mod+Ctrl+Shift+s exec "scrot '/tmp/%I:%M:%S.%y-%m-%d.png' -e 'gimp $f ; rm $f' -s"
-bindsym $mod+l exec i3lock -fp default -c \#2E2E2E
+bindsym $mod+l exec i3lock -ufp default -c \#2E2E2E
 bindsym $mod+Ctrl+c exec code
 bindsym $mod+m exec discord
 bindsym $mod+g exec gimp  
