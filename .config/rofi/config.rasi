@@ -1,0 +1,12 @@
+/*******************************************************************************
+ * ROFI SQUARED THEME USING THE NORD PALETTE 
+ * User                 : LR-Tech               
+ * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
+ *******************************************************************************/
+
+configuration {
+	modes: "drun,run,window,ssh";
+    font:   "JetBrains Mono 12";
+}
+
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
