@@ -43,7 +43,7 @@ return {
 				Lua = {},
 			},
 		})
-		lspc.tsserver.setup({})
+		lspc.ts_ls.setup({})
 		lspc.clangd.setup({})
 		lspc.svelte.setup({})
 		lspc.rust_analyzer.setup({})
