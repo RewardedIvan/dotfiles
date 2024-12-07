@@ -2,9 +2,8 @@
 
 ## Previews
 
-![neovide and cleared kitty](https://i.imgur.com/gaIlg21.png)
-![zen and kitty](https://i.imgur.com/xAeKvk3.png)
-(don't mind the time)
+![neovide](https://i.imgur.com/6KUBNnT.png)
+![two kitties](https://i.imgur.com/E7SbiTW.png)
 
 ## Dependencies
 
