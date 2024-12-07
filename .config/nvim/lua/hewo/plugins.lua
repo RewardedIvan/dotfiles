@@ -8,4 +8,5 @@ return {
 	"Mofiqul/vscode.nvim",
 	"folke/tokyonight.nvim",
 	"kdheepak/monochrome.nvim",
+    "decaycs/decay.nvim",
 }
