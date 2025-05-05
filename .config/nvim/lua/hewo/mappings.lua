@@ -1,10 +1,3 @@
--- motion
-vim.keymap.set("", "<C-j>", "<C-d>", {})
-vim.keymap.set("", "<C-k>", "<C-u>", {})
-
-vim.keymap.set("", "<C-h>", "_", {})
-vim.keymap.set("", "<C-l>", "$", {})
-
 -- pasting from os clipboard
 vim.api.nvim_set_keymap("n", "<C-v>", '"+p', {})
 vim.api.nvim_set_keymap("i", "<C-v>", '<esc>"+pa', {})
@@ -16,10 +9,12 @@ vim.keymap.set("n", " <tab>", vim.cmd.bdel)
 
 -- telescope
 vim.keymap.set("n", "<C-f>", require("telescope.builtin").find_files, {})
-vim.keymap.set("n", "<S-f>", require("telescope.builtin").live_grep, {})
+vim.keymap.set("n", "<C-S-f>", require("telescope.builtin").live_grep, {})
+vim.keymap.set("n", "<A-.>", function() vim.cmd.Telescope("emoji") end, {})
 -- nvim tree
 vim.keymap.set("n", "<C-e>", vim.cmd.NvimTreeToggle, { noremap = true })
 -- harpoon in plugins/
+-- supermaven in plugins/
 
 -- lsp
 vim.keymap.set("n", ";", vim.lsp.buf.hover)
