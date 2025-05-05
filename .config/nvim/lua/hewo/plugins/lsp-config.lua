@@ -59,5 +59,6 @@ return {
 				},
 			},
 		})
+		lspc.cmake.setup({})
 	end,
 }
