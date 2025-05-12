@@ -36,6 +36,8 @@ end
 
 local modkey = "Mod4" -- super, the windows key
 local terminal = "kitty"
+local editor = "neovide"
+local browser = "zen-browser"
 
 menubar.utils.terminal = terminal
 
@@ -123,6 +125,10 @@ local function set_global_keybinds()
                   {description = "quit awesome", group = "awesome"}),
         awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
                   {description = "open a terminal", group = "launcher"}),
+		awful.key({ modkey }, "b", function () awful.spawn(browser) end,
+			{description = "open browser", group = "launcher"}),
+		awful.key({ modkey }, "n", function () awful.spawn(editor) end,
+			{description = "open editor", group = "launcher"}),
 		awful.key(
             { "Control", "Shift" }, 'Tab',
             function ()
@@ -143,17 +149,37 @@ local function set_global_keybinds()
         awful.key({ modkey }, "Tab", awful.tag.history.restore,
                   {description = "go back", group = "tag"}),
 
-		awful.key({ modkey,           }, "j",
+		awful.key({ modkey,           }, "h",
 			function ()
-				awful.client.focus.byidx( 1)
+				awful.client.focus.global_bydirection("left")
+				if client.focus then client.focus:raise() end
+				if client.focus then client.focus:jump_to() end
 			end,
-			{description = "focus next by index", group = "client"}
+			{description = "focus and jump to client on the left", group = "client"}
+		),
+		awful.key({ modkey,           }, "l",
+			function ()
+				awful.client.focus.global_bydirection("right")
+				if client.focus then client.focus:raise() end
+				if client.focus then client.focus:jump_to() end
+			end,
+			{description = "focus and jump to client on the right", group = "client"}
 		),
 		awful.key({ modkey,           }, "k",
 			function ()
-				awful.client.focus.byidx(-1)
+				awful.client.focus.global_bydirection("up")
+				if client.focus then client.focus:raise() end
+				if client.focus then client.focus:jump_to() end
 			end,
-			{description = "focus previous by index", group = "client"}
+			{description = "focus and jump to client above", group = "client"}
+		),
+		awful.key({ modkey,           }, "j",
+			function ()
+				awful.client.focus.global_bydirection("down")
+				if client.focus then client.focus:raise() end
+				if client.focus then client.focus:jump_to() end
+			end,
+			{description = "focus and jump to client below", group = "client"}
 		),
 
         -- awful.key {
