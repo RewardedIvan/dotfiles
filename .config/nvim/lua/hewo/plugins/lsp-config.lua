@@ -51,6 +51,7 @@ return {
 		lspc.tailwindcss.setup({})
 		lspc.cssls.setup({})
 		lspc.html.setup({})
+		lspc.basedpyright.setup({})
 		lspc.jsonls.setup({
 			settings = {
 				json = {
